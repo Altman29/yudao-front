@@ -50,7 +50,7 @@ import type { UploadProps } from 'element-plus'
 
 import { generateUUID } from '@/utils'
 import { propTypes } from '@/utils/propTypes'
-import { getAccessToken, getTenantId } from '@/utils/auth'
+import { getAccessToken} from '@/utils/auth'
 import { createImageViewer } from '@/components/ImageViewer'
 
 defineOptions({ name: 'UploadImg' })
@@ -103,7 +103,7 @@ const deleteImg = () => {
 
 const uploadHeaders = ref({
   Authorization: 'Bearer ' + getAccessToken(),
-  'tenant-id': getTenantId()
+  // 'tenant-id': getTenantId()
 })
 
 const editImg = () => {

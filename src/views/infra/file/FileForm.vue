@@ -31,7 +31,7 @@
   </Dialog>
 </template>
 <script lang="ts" setup>
-import { getAccessToken, getTenantId } from '@/utils/auth'
+import { getAccessToken } from '@/utils/auth'
 
 defineOptions({ name: 'InfraFileForm' })
 
@@ -67,7 +67,7 @@ const submitFileForm = () => {
   // 提交请求
   uploadHeaders.value = {
     Authorization: 'Bearer ' + getAccessToken(),
-    'tenant-id': getTenantId()
+    // 'tenant-id': getTenantId()
   }
   unref(uploadRef)?.submit()
 }

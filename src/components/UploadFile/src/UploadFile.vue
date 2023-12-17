@@ -34,7 +34,7 @@
 </template>
 <script lang="ts" setup>
 import { propTypes } from '@/utils/propTypes'
-import { getAccessToken, getTenantId } from '@/utils/auth'
+import { getAccessToken } from '@/utils/auth'
 import type { UploadInstance, UploadUserFile, UploadProps, UploadRawFile } from 'element-plus'
 import { isArray, isString } from '@/utils/is'
 
@@ -62,7 +62,7 @@ const fileList = ref<UploadUserFile[]>([])
 const uploadNumber = ref<number>(0)
 const uploadHeaders = ref({
   Authorization: 'Bearer ' + getAccessToken(),
-  'tenant-id': getTenantId()
+  // 'tenant-id': getTenantId()
 })
 // 文件上传之前判断
 const beforeUpload: UploadProps['beforeUpload'] = (file: UploadRawFile) => {

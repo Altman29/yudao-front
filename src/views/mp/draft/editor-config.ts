@@ -32,7 +32,6 @@ export const createEditorConfig = (
         headers: {
           Accept: '*',
           Authorization: 'Bearer ' + getAccessToken(),
-          'tenant-id': getTenantId()
         },
 
         // 跨域是否传递 cookie ，默认为 false
